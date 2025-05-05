@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>DevIgnite Invoice Generator</title>
+    <link rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+    <div class="container">
+        <h1>DevIgnite Invoice Generator</h1>
+        <form id="invoice-form">
+            <input type="text" id="invoiceNumber" placeholder="Invoice Number (e.g. INV0001)" required />
+            <input type="date" id="invoiceDate" required />
+            <input type="text" id="clientName" placeholder="Client Name" required />
+            <textarea id="clientAddress" placeholder="Client Address" required></textarea>
+            <input type="text" id="clientVAT" placeholder="Client VAT Number" required />
+            <input type="text" id="clientEmail" placeholder="Client Email" required />
+            <textarea id="description" placeholder="Description of Work" required></textarea>
+            <input type="number" id="rate" placeholder="Rate (ZAR)" required />
+            <input type="number" id="quantity" placeholder="Quantity" required />
+            <textarea id="invoiceNote" placeholder="Custom Note to Client (e.g., deposit terms, thank-you note, etc.)"
+                rows="4" required></textarea>
+            <button type="button" onclick="generateInvoice()">Generate Invoice</button>
+        </form>
+
+
+
+        <div id="invoice-preview" class="invoice"
+            style="width: 800px; margin: 0 auto; background: white; padding: 20px;">
+            <!-- Invoice will be inserted here -->
+        </div>
+
+
+        <button id="download-btn" onclick="downloadPDF()" style="display:none;">Download PDF</button>
+    </div>
+
+    <script src="html2pdf.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+
+</html>
