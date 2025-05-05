@@ -1,4 +1,4 @@
-# 💼 DevIgnite Invoice Generator
+# 💼 Invoice Generator
 
 A lightweight, browser-based tool for generating branded PDF invoices for DevIgnite and its clients. No external dependencies or backend required — just open the app, fill out the form, and download a professional invoice PDF with your company logo and client-specific notes.
 
