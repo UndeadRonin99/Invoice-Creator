@@ -14,13 +14,19 @@
         <form id="invoice-form">
             <input type="text" id="invoiceNumber" placeholder="Invoice Number (e.g. INV0001)" required />
             <input type="date" id="invoiceDate" required />
+            <input type="text" id="dueDate" placeholder="Date invoice is due" required />
             <input type="text" id="clientName" placeholder="Client Name" required />
             <textarea id="clientAddress" placeholder="Client Address" required></textarea>
             <input type="text" id="clientVAT" placeholder="Client VAT Number" required />
             <input type="text" id="clientEmail" placeholder="Client Email" required />
-            <textarea id="description" placeholder="Description of Work" required></textarea>
-            <input type="number" id="rate" placeholder="Rate (ZAR)" required />
-            <input type="number" id="quantity" placeholder="Quantity" required />
+            <div id="items-container">
+                <div class="item-row">
+                    <input type="text" class="item-description" placeholder="Description" required />
+                    <input type="number" class="item-rate" placeholder="Rate (ZAR)" required />
+                    <input type="number" class="item-qty" placeholder="Quantity" required />
+                </div>
+            </div>
+            <button type="button" onclick="addItem()">➕ Add Another Item</button>
             <textarea id="invoiceNote" placeholder="Custom Note to Client (e.g., deposit terms, thank-you note, etc.)"
                 rows="4" required></textarea>
             <button type="button" onclick="generateInvoice()">Generate Invoice</button>
